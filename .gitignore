@@ -8,3 +8,7 @@
 
 # Ignore SBCL compiled code.
 *.fasl
+
+# Some of the LaTeX stuff.
+slides/slides.aux
+slides/slides.log

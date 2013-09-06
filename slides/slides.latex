@@ -1,0 +1,61 @@
+\documentclass{seminar}
+
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{bookman}
+\usepackage{amsfonts}
+\usepackage[dvips]{pstricks}
+\usepackage{semcolor,slidesec}
+\input{seminar.bug}
+\input{seminar.bg2}
+
+\definecolor{fillcolor}{rgb}{0.9,0.95,1.0}
+\definecolor{linecolor}{rgb}{0.8,0.85,0.9}
+\slideframe[\psset{fillcolor=fillcolor,linecolor=linecolor}]{scshadow}
+
+\newcommand{\hc}{Blue}
+\newcommand{\h}[1]{\slideheading{\textcolor{\hc}{#1}}}
+\newcommand{\tq}[1]{\textcolor{BrickRed}{\textit{#1}}}
+
+\title{\psshadowbox{OpenGL in Common Lisp}}
+\author{Christopher Mark Gore\\
+  \texttt{http://www.cgore.com}\\
+  \texttt{cgore@cgore.com}}
+\date{???day, November ??, AD 2013}
+
+\begin{document}
+
+\raggedslides[0mm]
+
+\begin{slide}
+  \color{\hc}
+
+  \begin{center}
+    \textbf{\emph{\Huge{$\lambda$ Lounge}}}
+  \end{center}
+
+  \maketitle
+
+  \color{Black}
+\end{slide}
+
+\begin{slide}
+  \h{Lisp is Cool!}
+\end{slide}
+
+\begin{slide}
+  \h{3D is Cool!}
+\end{slide}
+
+\begin{slide}
+  \h{Getting Started}
+  \textit{info on getting the environment going ...}
+\end{slide}
+
+\begin{slide}
+  \begin{center}
+    \textcolor{\hc}{\textbf{\emph{\Huge{Questions?}}}}
+  \end{center}
+\end{slide}
+
+\end{document}
