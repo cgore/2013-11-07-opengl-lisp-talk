@@ -21,7 +21,7 @@
 \author{Christopher Mark Gore\\
   \texttt{http://www.cgore.com}\\
   \texttt{cgore@cgore.com}}
-\date{???day, November ??, AD 2013}
+\date{Thursday, November 7, AD 2013}
 
 \begin{document}
 
@@ -31,7 +31,7 @@
   \color{\hc}
 
   \begin{center}
-    \textbf{\emph{\Huge{$\lambda$ Lounge}}}
+    \Huge{$\lambda$ Lounge}
   \end{center}
 
   \maketitle
@@ -41,15 +41,54 @@
 
 \begin{slide}
   \h{Lisp is Cool!}
+
+  \begin{center}
+    \includegraphics[height=2.75in]{mccarthy.eps}
+  \end{center}
 \end{slide}
 
 \begin{slide}
   \h{3D is Cool!}
+
+  \begin{center}
+    \includegraphics[width=2in]{pitfall.eps}
+    \includegraphics[width=2in]{pitfall-3d.eps}
+  \end{center}
+
+  Except for 3D Pitfall, which looks really lame.
 \end{slide}
 
 \begin{slide}
   \h{Getting Started}
-  \textit{info on getting the environment going ...}
+
+  \begin{enumerate}
+    \item Install Linux.\\
+      \texttt{http://aptosid.com}
+    \item Install SBCL.\\
+      \texttt{apt-get install sbcl\{,-doc,-source\} \textbackslash \\
+        cl-\{asdf,cffi\}}
+    \item Install Emacs and SLIME \textit{(Not strictly required.)}\\
+      \texttt{apt-get install emacs{,-goodies-el} cl-swank \textbackslash \\
+        cl-swank slime common-lisp-controller}
+    \item Install OpenGL.\\
+      \texttt{apt-get install libgl1-mesa-dev \textbackslash \\
+        libglu1-mesa\{,-dev\} libglut3\{,-dev\} \textellipsis}
+  \end{enumerate}
+\end{slide}
+
+\begin{slide}
+  \h{Extra Libraries}
+
+  \begin{itemize}
+    \item $\Sigma$, my library of random useful things in Common Lisp.\\
+      \texttt{https://github.com/cgore/sigma}
+    \item \texttt{cl-opengl}, or else we need to do a lot more work.\\
+      \texttt{https://github.com/3b/cl-opengl}
+  \end{itemize}
+\end{slide}
+
+\begin{slide}
+  \h{TODO}
 \end{slide}
 
 \begin{slide}
