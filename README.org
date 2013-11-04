@@ -7,4 +7,4 @@ This repo contains the slides for a talk I gave at Lambda Lounge in Saint Louis
 + [[http://cgore.com][My personal website (cgore.com)]]
 + [[https://github.com/cgore][My Github (cgore)]]
 + [[http://twitter.com/cgore][Twitter @cgore]]
-+ [[https://github.com/cgore/opengl-lisp-intro][This repo on Github]]
++ [[https://github.com/cgore/2013-11-07-opengl-lisp-talk][This repo on Github]]
