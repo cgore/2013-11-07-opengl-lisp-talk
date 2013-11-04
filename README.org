@@ -1,7 +1,7 @@
 * OpenGL in Common Lisp
 
 This repo contains the slides for a talk I gave at Lambda Lounge in Saint Louis
-11/2013 about how to get basic OpenGL working in Common Lisp.
+11/07/2013 about how to get basic OpenGL working in Common Lisp.
 
 + [[LICENSE][License]]
 + [[http://cgore.com][My personal website (cgore.com)]]
