@@ -97,11 +97,13 @@
   It is available at \texttt{http://www.quicklisp.org}.
 
   \begin{itemize}
-    \item curl -O http://beta.quicklisp.org/quicklisp.lisp
-    \item sbcl --load quicklisp.lisp
-    \item (quicklisp-quickstart:install)
-    \item (ql:quickload "cl-opengl")
+    \item \texttt{curl -O http://beta.quicklisp.org/quicklisp.lisp}
+    \item \texttt{sbcl --load quicklisp.lisp}
+    \item \texttt{(quicklisp-quickstart:install)}
+    \item \texttt{(ql:quickload "cl-opengl")}
   \end{itemize}
+
+  Now we should have a working OpenGL in Common Lisp.
 \end{slide}
 
 \begin{slide}
