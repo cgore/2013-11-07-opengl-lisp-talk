@@ -83,12 +83,20 @@
     \item $\Sigma$, my library of random useful things in Common Lisp.\\
       \texttt{https://github.com/cgore/sigma}
     \item \texttt{cl-opengl}, or else we need to do a lot more work.\\
-      \texttt{https://github.com/3b/cl-opengl}
+      \texttt{https://github.com/3b/cl-opengl}\\
+      This library provides \texttt{cl-glu} and \texttt{cl-glut}.
   \end{itemize}
 \end{slide}
 
 \begin{slide}
-  \h{TODO}
+  \h{Hello Cube}
+
+  The simplest thing to do in 3D is a plain cube.
+  This is a good test to see if the libraries and dependencies are all okay.
+\end{slide}
+
+\begin{slide}
+  \h{TODO ...}
 \end{slide}
 
 \begin{slide}
