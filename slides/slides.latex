@@ -9,6 +9,7 @@
 \input{seminar.bug}
 \input{seminar.bg2}
 
+
 \definecolor{fillcolor}{rgb}{0.9,0.95,1.0}
 \definecolor{linecolor}{rgb}{0.8,0.85,0.9}
 \slideframe[\psset{fillcolor=fillcolor,linecolor=linecolor}]{scshadow}
@@ -64,7 +65,7 @@
   \begin{enumerate}
     \item Install Linux.\\
       \texttt{http://aptosid.com}
-    \item Install SBCL.\\
+    \item Install SBCL and some libraries.\\
       \texttt{apt-get install sbcl\{,-doc,-source\} \textbackslash \\
         cl-\{asdf,cffi\}}
     \item Install Emacs and SLIME \textit{(Not strictly required.)}\\
@@ -81,10 +82,25 @@
 
   \begin{itemize}
     \item $\Sigma$, my library of random useful things in Common Lisp.\\
-      \texttt{https://github.com/cgore/sigma}
+      \texttt{https://github.com/cgore/sigma}\\
+      \textit{(Almost completely undocumented.)}
     \item \texttt{cl-opengl}, or else we need to do a lot more work.\\
       \texttt{https://github.com/3b/cl-opengl}\\
       This library provides \texttt{cl-glu} and \texttt{cl-glut}.
+  \end{itemize}
+\end{slide}
+
+\begin{slide}
+  \h{Getting Libraries via Quicklisp}
+
+  Quicklisp is the least irritating way to get Common Lisp libraries.
+  It is available at \texttt{http://www.quicklisp.org}.
+
+  \begin{itemize}
+    \item curl -O http://beta.quicklisp.org/quicklisp.lisp
+    \item sbcl --load quicklisp.lisp
+    \item (quicklisp-quickstart:install)
+    \item (ql:quickload "cl-opengl")
   \end{itemize}
 \end{slide}
 
@@ -93,6 +109,7 @@
 
   The simplest thing to do in 3D is a plain cube.
   This is a good test to see if the libraries and dependencies are all okay.
+  Cf. \texttt{source/hello-cube.lisp}, run \texttt{(hello-cube)}.
 \end{slide}
 
 \begin{slide}
