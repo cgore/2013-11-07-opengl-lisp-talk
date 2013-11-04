@@ -1,3 +1,6 @@
 [submodule "sigma"]
 	path = sigma
 	url = git@github.com:cgore/sigma.git
+[submodule "cl-opengl"]
+	path = cl-opengl
+	url = git@github.com:3b/cl-opengl.git
