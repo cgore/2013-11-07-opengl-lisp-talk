@@ -130,6 +130,31 @@
 \end{slide}
 
 \begin{slide}
+  \h{Changing Colors}
+
+  We would like to be able to change the colors of the cube.
+  Cf. \texttt{source/colors.lisp}, run \texttt{(colors)}.
+
+  We need new accessors on the window class:
+\begin{verbatim}
+((red :accessor red :initform 1)
+ (green :accessor green :initform 1)
+ (blue :accessor blue :initform 1))
+\end{verbatim}
+
+  We change the color definition:
+\begin{verbatim}
+(gl:color (red w) (green w) (blue w))
+\end{verbatim}
+
+  We call an update function:
+\begin{verbatim}
+(glut:post-redisplay)
+\end{verbatim}
+
+\end{slide}
+
+\begin{slide}
   \h{TODO ...}
 \end{slide}
 
