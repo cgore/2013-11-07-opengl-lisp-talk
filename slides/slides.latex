@@ -115,6 +115,21 @@
 \end{slide}
 
 \begin{slide}
+  \h{Handling Keypresses}
+
+  It would be nice if we could quit the program just by pressing \textbf{Esc}.
+  Cf. \texttt{source/quit-button.lisp}, run \texttt{(quit-button)}.
+
+\begin{verbatim}
+(defmethod glut:keyboard
+           ((w quit-button-window) key x y)
+  (declare (ignore x y))
+  (when (eql key #\Esc)
+    (glut:destroy-current-window)))
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
   \h{TODO ...}
 \end{slide}
 
