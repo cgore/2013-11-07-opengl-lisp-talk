@@ -57,7 +57,7 @@
   ;; viewing transformation
   (glu:look-at 0 0 5 0 0 0 0 1 0)
   ;; modeling transformation
-  (gl:scale 1 2 1)
+  (gl:scale 1 1 1)
   (glut:wire-cube 1)
   (gl:flush))
 
