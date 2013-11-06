@@ -93,15 +93,15 @@
 \begin{slide}
   \h{Getting Libraries via Quicklisp}
 
-  Quicklisp is the least irritating way to get Common Lisp libraries.
+  Quicklisp is the less irritating way to get Common Lisp libraries.
   It is available at \texttt{http://www.quicklisp.org}.
 
-  \begin{itemize}
-    \item \texttt{curl -O http://beta.quicklisp.org/quicklisp.lisp}
-    \item \texttt{sbcl --load quicklisp.lisp}
-    \item \texttt{(quicklisp-quickstart:install)}
-    \item \texttt{(ql:quickload "cl-opengl")}
-  \end{itemize}
+\begin{verbatim}
+curl -O http://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp
+(quicklisp-quickstart:install)
+(ql:quickload "cl-opengl")
+\end{verbatim}
 
   Now we should have a working OpenGL in Common Lisp.
 \end{slide}
