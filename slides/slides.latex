@@ -214,9 +214,13 @@ sbcl --load quicklisp.lisp
   \h{What I Still Need to Learn}
 
   \begin{itemize}
-    \item Applying textures
-    \item Loading models
-    \item \textellipsis
+    \item Applying textures seems complicated.
+      Cf.\\
+      \texttt{cl-opengl/examples/misc/render-to-texture.lisp}\\
+      for an example.
+    \item Loading 3D models from files.
+      I have no idea how to do this.
+    \item Lots of other stuff \textellipsis
   \end{itemize}
 \end{slide}
 
