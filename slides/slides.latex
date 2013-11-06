@@ -184,7 +184,40 @@ sbcl --load quicklisp.lisp
 \end{slide}
 
 \begin{slide}
-  \h{TODO ...}
+  \h{Projection Matrices}
+
+  We use \texttt{gl:with-pushed-matrix} to work on a local projection matrix.
+
+  This is so that we can apply local translations, which we do via
+  \texttt{gl:translate}, \textit{``pushing out''} the local matrix in some direction.
+  Thus, the cubes are not all at the center of the scene.
+
+  Rotations can also be applied via projection matrices,
+  and probably other fun stuff too.
+\end{slide}
+
+\begin{slide}
+  \h{Rotation}
+
+  Rotation is achieved via the \texttt{gl:rotate} function, which takes:
+  \begin{itemize}
+    \item $\theta$, the angle of rotation.
+    \item $x$, for the x axis.
+    \item $y$, for the y axis.
+    \item $z$, for the z axis.
+  \end{itemize}
+
+  Cf. \texttt{source/rotate.lisp}, run \texttt{(rotate)}.
+\end{slide}
+
+\begin{slide}
+  \h{What I Still Need to Learn}
+
+  \begin{itemize}
+    \item Applying textures
+    \item Loading models
+    \item \textellipsis
+  \end{itemize}
 \end{slide}
 
 \begin{slide}

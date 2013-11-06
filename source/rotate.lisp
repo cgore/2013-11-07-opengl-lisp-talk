@@ -41,17 +41,18 @@
 (require :cl-glu)
 (require :cl-glut)
 
-(defclass lighting-window (glut:window)
+(defclass rotate-window (glut:window)
   ((red :accessor red :initform 1)
    (green :accessor green :initform 1)
    (blue :accessor blue :initform 1)
    (eye-x :accessor eye-x :initform 0)
    (eye-y :accessor eye-y :initform 0)
-   (eye-z :accessor eye-z :initform 5))
-  (:default-initargs :width 500 :height 500 :title "lighting.lisp"
+   (eye-z :accessor eye-z :initform 5)
+   (light-theta :accessor light-theta :initform 0.0))
+  (:default-initargs :width 500 :height 500 :title "rotate.lisp"
                      :mode '(:single :rgb)))
 
-(defmethod glut:display-window :before ((w lighting-window))
+(defmethod glut:display-window :before ((w rotate-window))
   (gl:clear-color 0 0 0 0)
   (gl:shade-model :smooth)
   (gl:enable :lighting)
@@ -59,13 +60,14 @@
   (gl:enable :depth-test)
   (gl:enable :color-material))
 
-(defmethod glut:display ((w lighting-window))
+(defmethod glut:display ((w rotate-window))
   (gl:clear :color-buffer :depth-buffer)
   (gl:with-pushed-matrix
     (glu:look-at (eye-x w) (eye-y w) (eye-z w)
                  0 0 0  ; look pos
                  0 1 0) ; up vector
     (gl:with-pushed-matrix
+      (gl:rotate (light-theta w) 0 1 0)
       (gl:light :light0 :position #(0 100 150 0)))
     (gl:color (red w) (green w) (blue w))
     (glut:solid-torus 0.05 1.75 30 30)
@@ -89,7 +91,7 @@
   (gl:flush))
 
 
-(defmethod glut:reshape ((w lighting-window) width height)
+(defmethod glut:reshape ((w rotate-window) width height)
   (gl:viewport 0 0 width height)
   (gl:matrix-mode :projection)
   (gl:load-identity)
@@ -97,7 +99,7 @@
   (gl:matrix-mode :modelview))
 
 
-(defmethod glut:keyboard ((w lighting-window) key x y)
+(defmethod glut:keyboard ((w rotate-window) key x y)
   (declare (ignore x y))
   (flet ((update (slot n)
            (setf (slot-value w slot) n)
@@ -118,7 +120,9 @@
       (#\d (update+ 'eye-x 1))
       (#\q (update+ 'eye-z -1))
       (#\e (update+ 'eye-z 1))
+      (#\l (update+ 'light-theta 10))
+      (#\L (update+ 'light-theta -10))
       (#\Esc (glut:destroy-current-window)))))
 
-(defun lighting ()
-  (glut:display-window (make-instance 'lighting-window)))
+(defun rotate ()
+  (glut:display-window (make-instance 'rotate-window)))
