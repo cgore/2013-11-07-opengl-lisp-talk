@@ -169,6 +169,21 @@ sbcl --load quicklisp.lisp
 \end{slide}
 
 \begin{slide}
+  \h{Smooth Lighting}
+
+  Wireframes are kind of ugly, and you don't really need OpenGL to make them.
+  So, we would like to use smooth lighting model on solid objects.
+
+
+  We have to almost completely gut the implementation of the
+  \texttt{glut:display-window} and the
+  \texttt{glut:display} methods.
+  We also change out the cube out for a more complex scene.
+
+  Cf. \texttt{source/lighting.lisp}, run \texttt{(lighting)}.
+\end{slide}
+
+\begin{slide}
   \h{TODO ...}
 \end{slide}
 
