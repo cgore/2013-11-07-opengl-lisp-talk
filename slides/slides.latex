@@ -151,7 +151,21 @@
 \begin{verbatim}
 (glut:post-redisplay)
 \end{verbatim}
+\end{slide}
 
+\begin{slide}
+  \h{Moving the Camera}
+
+  We would like to be able to move around the camera within the scene.
+  Cf. \texttt{source/movement.lisp}, run \texttt{(movement)}.
+
+  We make class attributes and keyboard code like with the colors,
+  and update the camera like this:
+\begin{verbatim}
+(glu:look-at (eye-x w) (eye-y w) (eye-z w)
+             0 0 0  ; look pos
+             0 1 0) ; up vector
+\end{verbatim}
 \end{slide}
 
 \begin{slide}
