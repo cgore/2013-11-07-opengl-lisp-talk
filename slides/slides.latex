@@ -69,7 +69,7 @@
       \texttt{apt-get install sbcl\{,-doc,-source\} \textbackslash \\
         cl-\{asdf,cffi\}}
     \item Install Emacs and SLIME \textit{(Not strictly required.)}\\
-      \texttt{apt-get install emacs{,-goodies-el} cl-swank \textbackslash \\
+      \texttt{apt-get install emacs\{,-goodies-el\} cl-swank \textbackslash \\
         cl-swank slime common-lisp-controller}
     \item Install OpenGL.\\
       \texttt{apt-get install libgl1-mesa-dev \textbackslash \\
