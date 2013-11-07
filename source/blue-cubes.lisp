@@ -40,15 +40,15 @@
 (require :cl-glu)
 (require :cl-glut)
 
-(defclass cubes-window (glut:window)
+(defclass blue-cubes-window (glut:window)
   ((eye-x :accessor eye-x :initform 0)
    (eye-y :accessor eye-y :initform 0)
    (eye-z :accessor eye-z :initform 5)
    (light-theta :accessor light-theta :initform 0.0))
-  (:default-initargs :width 700 :height 700 :title "cubes.lisp"
+  (:default-initargs :width 700 :height 700 :title "blue-cubes.lisp"
                      :mode '(:single :rgb)))
 
-(defmethod glut:display-window :before ((w cubes-window))
+(defmethod glut:display-window :before ((w blue-cubes-window))
   (gl:clear-color 0 0 0 0)
   (gl:shade-model :smooth)
   (gl:enable :lighting)
@@ -56,16 +56,13 @@
   (gl:enable :depth-test)
   (gl:enable :color-material))
 
-(defun draw-cube (size x y z r g b)
+(defun draw-blue-cube (x y z)
   (gl:with-pushed-matrix
     (gl:translate x y z)
-    (gl:color r g b)
-    (glut:solid-cube size)))
+    (gl:color 0 0.2 1.0)
+    (glut:solid-cube 0.25)))
 
-(defun color-fixer (v)
-  (/ (+ v 5.0) 10))
-
-(defmethod glut:display ((w cubes-window))
+(defmethod glut:display ((w blue-cubes-window))
   (gl:clear :color-buffer :depth-buffer)
   (gl:with-pushed-matrix
     (glu:look-at (eye-x w) (eye-y w) (eye-z w)
@@ -75,21 +72,19 @@
       (gl:rotate (light-theta w) 0 1 0)
       (gl:light :light0 :position #(0 100 150 0)))
     (loop for x from -5 to 5 do
-    (loop for y from -5 to 5 do
-    (loop for z from -5 to 5 do
-         (draw-cube 0.25
-                    x y z
-                    (color-fixer x) (color-fixer y) (color-fixer z))))))
+         (loop for y from -5 to 5 do
+              (loop for z from -5 to 5 do
+                   (draw-blue-cube x y z)))))
   (gl:flush))
 
-(defmethod glut:reshape ((w cubes-window) width height)
+(defmethod glut:reshape ((w blue-cubes-window) width height)
   (gl:viewport 0 0 width height)
   (gl:matrix-mode :projection)
   (gl:load-identity)
   (gl:frustum -1 1 -1 1 1.5 20)
   (gl:matrix-mode :modelview))
 
-(defmethod glut:keyboard ((w cubes-window) key x y)
+(defmethod glut:keyboard ((w blue-cubes-window) key x y)
   (declare (ignore x y))
   (flet ((update (slot n)
            (setf (slot-value w slot) n)
@@ -108,5 +103,5 @@
       (#\L (update+ 'light-theta -10))
       (#\Esc (glut:destroy-current-window)))))
 
-(defun cubes ()
-  (glut:display-window (make-instance 'cubes-window)))
+(defun blue-cubes ()
+  (glut:display-window (make-instance 'blue-cubes-window)))

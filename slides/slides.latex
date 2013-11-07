@@ -111,14 +111,14 @@ sbcl --load quicklisp.lisp
 
   The simplest thing to do in 3D is a plain cube.
   This is a good test to see if the libraries and dependencies are all okay.
-  Cf. \texttt{source/hello-cube.lisp}, run \texttt{(hello-cube)}.
+  Cf. \texttt{hello-cube.lisp}, run \texttt{(hello-cube)}.
 \end{slide}
 
 \begin{slide}
   \h{Handling Keypresses}
 
   It would be nice if we could quit the program just by pressing \textbf{Esc}.
-  Cf. \texttt{source/quit-button.lisp}, run \texttt{(quit-button)}.
+  Cf. \texttt{quit-button.lisp}, run \texttt{(quit-button)}.
 
 \begin{verbatim}
 (defmethod glut:keyboard
@@ -133,7 +133,7 @@ sbcl --load quicklisp.lisp
   \h{Changing Colors}
 
   We would like to be able to change the colors of the cube.
-  Cf. \texttt{source/colors.lisp}, run \texttt{(colors)}.
+  Cf. \texttt{colors.lisp}, run \texttt{(colors)}.
 
   We need new accessors on the window class:
 \begin{verbatim}
@@ -157,7 +157,7 @@ sbcl --load quicklisp.lisp
   \h{Moving the Camera}
 
   We would like to be able to move around the camera within the scene.
-  Cf. \texttt{source/movement.lisp}, run \texttt{(movement)}.
+  Cf. \texttt{movement.lisp}, run \texttt{(movement)}.
 
   We make class attributes and keyboard code like with the colors,
   and update the camera like this:
@@ -180,7 +180,7 @@ sbcl --load quicklisp.lisp
   \texttt{glut:display} methods.
   We also change out the cube out for a more complex scene.
 
-  Cf. \texttt{source/lighting.lisp}, run \texttt{(lighting)}.
+  Cf. \texttt{lighting.lisp}, run \texttt{(lighting)}.
 \end{slide}
 
 \begin{slide}
@@ -207,7 +207,16 @@ sbcl --load quicklisp.lisp
     \item $z$, for the z axis.
   \end{itemize}
 
-  Cf. \texttt{source/rotate.lisp}, run \texttt{(rotate)}.
+  Cf. \texttt{rotate.lisp}, run \texttt{(rotate)}.
+\end{slide}
+
+\begin{slide}
+  \h{Other Cool Demos}
+
+  \begin{itemize}
+    \item \texttt{rainbow-cubes.lisp} -- lots of colorful cubes in a cube.
+    \item \texttt{blue-cubes.lisp} -- the same, just all blue.
+  \end{itemize}
 \end{slide}
 
 \begin{slide}
