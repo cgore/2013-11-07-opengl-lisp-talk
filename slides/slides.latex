@@ -211,6 +211,24 @@ sbcl --load quicklisp.lisp
 \end{slide}
 
 \begin{slide}
+  \h{The GLUT Clock}
+
+  We typically want stuff to happen in the background.
+  Cf. \texttt{glut-clock.lisp}, run \texttt{(glut-clock)}.
+\end{slide}
+
+\begin{slide}
+  \h{That Was Ugly!  We Need Double Buffering!}
+
+  This is pretty easy to do.
+  Cf. \texttt{double-buffered.lisp}, run \texttt{(double-buffered)}.
+
+  The important bits are changing the window mode to:\\
+  \texttt{:mode '(:double :rgba)}\\
+  And replacing \texttt{(gl:flush)} for \texttt{(glut:swap-buffers)}.
+\end{slide}
+
+\begin{slide}
   \h{Other Cool Demos}
 
   \begin{itemize}
