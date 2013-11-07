@@ -85,9 +85,12 @@
   (gl:matrix-mode :modelview))
 
 (defmethod glut:idle ((w double-buffered-window))
-  (setf (light-theta w)
-        (* 10 (mod (get-universal-time) 36)))
-  (glut:post-redisplay))
+  (let ((tens (/ (get-internal-real-time)
+                 (/ internal-time-units-per-second
+                    10))))
+    (setf (light-theta w)
+          (* 10 (mod tens 36)))
+    (glut:post-redisplay)))
 
 (defmethod glut:keyboard ((w double-buffered-window) key x y)
   (declare (ignore x y))
