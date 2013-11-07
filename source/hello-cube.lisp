@@ -43,7 +43,7 @@
 
 (defclass cube-window (glut:window)
   ()
-  (:default-initargs :width 500 :height 500 :title "hello-cube.lisp"
+  (:default-initargs :width 700 :height 700 :title "hello-cube.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w cube-window))

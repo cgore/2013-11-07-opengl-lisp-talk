@@ -49,7 +49,7 @@
    (eye-y :accessor eye-y :initform 0)
    (eye-z :accessor eye-z :initform 5)
    (light-theta :accessor light-theta :initform 0.0))
-  (:default-initargs :width 500 :height 500 :title "rotate.lisp"
+  (:default-initargs :width 700 :height 700 :title "rotate.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w rotate-window))

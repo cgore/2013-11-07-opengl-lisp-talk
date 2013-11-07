@@ -43,7 +43,7 @@
 
 (defclass quit-button-window (glut:window)
   ()
-  (:default-initargs :width 500 :height 500 :title "quit-button.lisp"
+  (:default-initargs :width 700 :height 700 :title "quit-button.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w quit-button-window))

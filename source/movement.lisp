@@ -48,7 +48,7 @@
    (eye-x :accessor eye-x :initform 0)
    (eye-y :accessor eye-y :initform 0)
    (eye-z :accessor eye-z :initform 5))
-  (:default-initargs :width 500 :height 500 :title "movement.lisp"
+  (:default-initargs :width 700 :height 700 :title "movement.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w movement-window))

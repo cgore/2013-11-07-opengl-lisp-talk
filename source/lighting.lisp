@@ -48,7 +48,7 @@
    (eye-x :accessor eye-x :initform 0)
    (eye-y :accessor eye-y :initform 0)
    (eye-z :accessor eye-z :initform 5))
-  (:default-initargs :width 500 :height 500 :title "lighting.lisp"
+  (:default-initargs :width 700 :height 700 :title "lighting.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w lighting-window))

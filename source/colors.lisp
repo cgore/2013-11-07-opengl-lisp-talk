@@ -45,7 +45,7 @@
   ((red :accessor red :initform 1)
    (green :accessor green :initform 1)
    (blue :accessor blue :initform 1))
-  (:default-initargs :width 500 :height 500 :title "colors.lisp"
+  (:default-initargs :width 700 :height 700 :title "colors.lisp"
                      :mode '(:single :rgb)))
 
 (defmethod glut:display-window :before ((w colors-window))
